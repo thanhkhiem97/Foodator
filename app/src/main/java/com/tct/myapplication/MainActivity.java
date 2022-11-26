@@ -40,11 +40,9 @@ public class MainActivity extends AppCompatActivity {
         recyclerViewPopularList.setLayoutManager(linearLayoutManager);
 
         ArrayList<CategoriesDomain> categoriesDomainArray = new ArrayList();
-        categoriesDomainArray.add(new CategoriesDomain("Pizza", "cart_1"));
-        categoriesDomainArray.add(new CategoriesDomain("Burger", "cart_2"));
-        categoriesDomainArray.add(new CategoriesDomain("Hotdog", "cart_3"));
-        categoriesDomainArray.add(new CategoriesDomain("Drink", "cart_4"));
-        categoriesDomainArray.add(new CategoriesDomain("Donut", "cart_5"));
+        categoriesDomainArray.add(new CategoriesDomain("Pepporoni Pizza", R.drawable.pop_1));
+        categoriesDomainArray.add(new CategoriesDomain("Cheese Burger", R.drawable.pop_2));
+        categoriesDomainArray.add(new CategoriesDomain("Veget Hotdog", R.drawable.pop_3));
 
         adapterPopular = new PopularAdapter(categoriesDomainArray);
         recyclerViewPopularList.setAdapter(adapterPopular);
@@ -56,12 +54,12 @@ public class MainActivity extends AppCompatActivity {
         recyclerViewCategoryList.setLayoutManager(linearLayoutManager);
 
         ArrayList<CategoriesDomain> categoriesDomainArray = new ArrayList();
-        categoriesDomainArray.add(new CategoriesDomain("Pizza", "cart_1"));
-        categoriesDomainArray.add(new CategoriesDomain("Burger", "cart_2"));
-        categoriesDomainArray.add(new CategoriesDomain("Hotdog", "cart_3"));
-        categoriesDomainArray.add(new CategoriesDomain("Drink", "cart_4"));
-        categoriesDomainArray.add(new CategoriesDomain("Donut", "cart_5"));
 
+        categoriesDomainArray.add(new CategoriesDomain("Pizza", R.drawable.cat_1));
+        categoriesDomainArray.add(new CategoriesDomain("Burger", R.drawable.cat_2));
+        categoriesDomainArray.add(new CategoriesDomain("Hotdog", R.drawable.cat_3));
+        categoriesDomainArray.add(new CategoriesDomain("Drink", R.drawable.cat_4));
+        categoriesDomainArray.add(new CategoriesDomain("Donut", R.drawable.cat_5));
         adapter = new CategoryAdapter(categoriesDomainArray);
         recyclerViewCategoryList.setAdapter(adapter);
     }

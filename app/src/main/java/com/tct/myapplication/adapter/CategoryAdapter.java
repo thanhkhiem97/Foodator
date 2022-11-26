@@ -1,5 +1,6 @@
 package com.tct.myapplication.adapter;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +12,7 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
 import com.tct.myapplication.R;
 import com.tct.myapplication.mode.CategoriesDomain;
 
@@ -33,11 +35,15 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.ViewHo
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         holder.textView.setText(arrayList.get(position).getTile());
-        switch (position) {
-            case 0:
-                holder.constraintLayout.setBackground(ContextCompat.getDrawable(holder.textView.getContext(), R.drawable.cart_background));
-                break;
-        }
+        holder.imageView.setImageResource(R.drawable.cat_1);
+//        Log.d("THanhkhie", arrayList.get(position).getImg()+"");
+//        Glide.with(holder.itemView.getContext())
+//                .load(R.drawable.cat_1)
+//                .into(holder.imageView);
+        if (position % 2 == 0)
+            holder.constraintLayout.setBackground(ContextCompat.getDrawable(holder.textView.getContext(), R.drawable.cart_background));
+        else
+            holder.constraintLayout.setBackground(ContextCompat.getDrawable(holder.textView.getContext(), R.drawable.cart_background_xanh));
 
 //        int drawResourId = holder.itemView.getContext().getResources().getIdentifier()
 

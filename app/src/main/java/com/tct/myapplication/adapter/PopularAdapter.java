@@ -34,7 +34,7 @@ public class PopularAdapter extends RecyclerView.Adapter<PopularAdapter.ViewHold
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         holder.textView.setText(arrayList.get(position).getTile());
 
-
+        holder.imageView.setImageResource(R.drawable.pop_2);
 //        int drawResourId = holder.itemView.getContext().getResources().getIdentifier()
 
     }

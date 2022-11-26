@@ -27,7 +27,7 @@
         android:layout_height="wrap_content"
         android:padding="10dp"
         app:layout_constraintTop_toBottomOf="@+id/textView13"
-        app:srcCompat="@drawable/pop_1"
+        android:src="@drawable/pop_1"
         tools:ignore="MissingConstraints" />
 
     <TextView

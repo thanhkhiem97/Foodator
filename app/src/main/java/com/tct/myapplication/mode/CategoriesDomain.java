@@ -2,11 +2,11 @@ package com.tct.myapplication.mode;
 
 public class CategoriesDomain {
     String tile;
-    String pic;
+    int img;
 
-    public CategoriesDomain(String tile, String pic) {
+    public CategoriesDomain(String tile, int pic) {
         this.tile = tile;
-        this.pic = pic;
+        this.img = img;
     }
 
     public String getTile() {
@@ -17,11 +17,11 @@ public class CategoriesDomain {
         this.tile = tile;
     }
 
-    public String getPic() {
-        return pic;
+    public int getImg() {
+        return img;
     }
 
-    public void setPic(String pic) {
-        this.pic = pic;
+    public void setImg(int img) {
+        this.img = img;
     }
 }
